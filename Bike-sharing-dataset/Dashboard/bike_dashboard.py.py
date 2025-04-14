@@ -46,9 +46,6 @@ col2.metric("Rata-rata Harian", f"{filtered_df['cnt'].mean():,.2f}")
 col3.metric("Hari dengan Peminjaman Tertinggi", filtered_df.loc[filtered_df['cnt'].idxmax(), 'dteday'].strftime('%Y-%m-%d'))
 
 # Chart 1: Peminjaman per Bulan
-import matplotlib.pyplot as plt
-import seaborn as sns
-
 monthly = df.groupby('month')['cnt'].sum()
 
 # Plot dengan seaborn
