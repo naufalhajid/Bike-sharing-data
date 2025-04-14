@@ -8,7 +8,7 @@ from PIL import Image
 st.set_page_config(page_title="Bike Sharing Dashboard", layout="wide")
 
 # Load Data
-df = pd.read_csv("Bike-sharing-dataset/day.csv")
+df = pd.read_csv("Data/day.csv")
 df['dteday'] = pd.to_datetime(df['dteday'])
 df['month'] = df['dteday'].dt.month
 df['weekday'] = df['dteday'].dt.day_name()
